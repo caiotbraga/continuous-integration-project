@@ -23,6 +23,11 @@ jobs:
           POSTGRES_USER: root
           POSTGRES_PASSWORD: root
           POSTGRES_DB: root
+          DB_HOST: localhost
+          DB_USER: root
+          DB_PASSWORD: root
+          DB_NAME: root
+          DB_PORT: 5432
         options: >-
           --health-cmd="pg_isready -U postgres"
           --health-interval=10s
