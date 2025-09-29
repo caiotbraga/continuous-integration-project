@@ -6,8 +6,7 @@ services:
       - POSTGRES_PASSWORD=root
       - POSTGRES_DB=root
     volumes:
-      - pgdata:/var/lib/postgresql/data
-
+      - ./postgres-data:/var/lib/postgresql/data
 
   app: 
     image: golang:1.22
