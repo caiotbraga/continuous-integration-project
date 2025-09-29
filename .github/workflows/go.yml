@@ -13,6 +13,12 @@ jobs:
 
   ci:
     runs-on: ubuntu-latest
+    env:                
+      DB_HOST: postgres
+      DB_USER: root
+      DB_PASSWORD: root
+      DB_NAME: root
+      DB_PORT: 5432
 
     services:
       postgres:
@@ -47,5 +53,6 @@ jobs:
       with:
         version: v1.59
         args: controllers/ database/ models/ routes/
+
     - name: Test
       run: go test -v main_test.go
