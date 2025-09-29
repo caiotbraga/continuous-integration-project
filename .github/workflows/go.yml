@@ -20,6 +20,9 @@ jobs:
       uses: actions/setup-go@v4
       with:
         go-version: '1.22'
+        
+    - name: Criar pasta de dados do Postgres
+      run: mkdir -p ./postgres-data
 
     - name: Inicia banco
       run: docker compose up -d postgres
